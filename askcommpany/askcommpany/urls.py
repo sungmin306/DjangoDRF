@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('chat/',include('chat.urls')),
+    path('instagram/',include('instagram.urls'))
 ]
