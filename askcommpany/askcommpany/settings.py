@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog', # APP 생성후 INSTALLED_APPS에 앱을 등록해야함
     'rest_framework',
     'chat',
+    'instagram',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
