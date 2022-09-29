@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
 
+#from django.conf import global_settings
+#from askcompany import settings
+# 위 두개를 합쳐야함 한번에 합쳐서 from 하는 코드
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('chat/',include('chat.urls')),
     path('instagram/',include('instagram.urls'))
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
+# settings.MEDIA_URL
+# settings.MEDIA_ROOT

@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Post(models.Model):
     message = models.TextField()
+    photo = models.ImageField(blank=True, upload_to = 'instagram/post/%Y/%m/%d') # 파일 이 안쌓이도록 도와줌 upload ~
+    is_public = models.BooleanField(default=False, verbose_name='공개여부')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
