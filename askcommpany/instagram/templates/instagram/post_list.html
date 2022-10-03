@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charet="utf-8"/>
+    <title>Instagram / Post List</title>
+</head>
+<body>
+    <from action="" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="검색" />
+    </from> 
+    <table>
+        <tbody>
+    <!-- {{post_list}} -->
+            {% for post in post_list %}
+            <tr>
+                <td>
+                    <!-- {{post.photo}} -->
+                    {% if post.photo %}
+                        <img src="{{ post.photo.url}}" style="width: 100px;"/>
+                    {% else %}
+                        No Photo
+                    {% endif %}       
+               </td>
+                <td>
+                    <!-- 이렇게 해야 사진도 가능 -->
+                    {{post.message}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
