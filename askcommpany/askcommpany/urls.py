@@ -25,9 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('chat/',include('chat.urls')),
-    path('instagram/',include('instagram.urls'))
+    path('instagram/',include('instagram.urls')),
+    path('accounts/',include('accounts.urls'))
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root =settings.MEDIA_ROOT)
+
 # settings.MEDIA_URL
 # settings.MEDIA_ROOT

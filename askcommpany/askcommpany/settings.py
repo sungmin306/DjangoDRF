@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'chat',
     'instagram',
+    'accounts',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
